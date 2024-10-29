@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約システム</title>
+    <style>
+        #message {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        #thankyou {
+            display: none;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="message">(予約受付中)</div>
+    <button id="reserveButton" onclick="reserve()">予約する</button>
+    <div id="thankyou">ありがとうございました</div>
+
+    <script>
+        function reserve() {
+            // テキストを「予約済み」に変更
+            document.getElementById("message").textContent = "(予約済み)";
+
+            // ボタンを非表示にする
+            document.getElementById("reserveButton").style.display = "none";
+
+            // 「ありがとうございました」のメッセージを表示
+            document.getElementById("thankyou").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
